@@ -2,9 +2,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>current orders</title>
 </head>
 <body>
-    <h1>{{ currentOrders }}</h1>
+
+    
+    <div class="order">
+        <table>
+            <tr>
+                <th>date and clock</th>
+                <th>order number</th>
+                <th>order details</th>
+            </tr>
+           
+            {% for date,number,detail in orders %}
+            <tr>
+                <td>{{ date }}</td>
+                <td>{{ number }}</td>
+                <td>{{ detail }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+    
+    
+    <button><a href="http://127.0.0.1:5000/create_order">create order</a></button>
+
 </body>
 </html>
