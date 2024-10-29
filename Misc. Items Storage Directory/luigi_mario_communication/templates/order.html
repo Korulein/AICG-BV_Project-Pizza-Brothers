@@ -13,6 +13,7 @@
                 <th>date and clock</th>
                 <th>order number</th>
                 <th>order details</th>
+                <th>status</th>
             </tr>
            
             {% for date,number,detail in orders %}
@@ -20,8 +21,19 @@
                 <td>{{ date }}</td>
                 <td>{{ number }}</td>
                 <td>{{ detail }}</td>
+                <td>waiting</td>
             </tr>
             {% endfor %}
+            
+            {% for date,number,detail in preparation %}
+            <tr>
+                <td>{{ date }}</td>
+                <td>{{ number }}</td>
+                <td>{{ detail }}</td>
+                <td>preparation</td>
+            </tr>
+            {% endfor %}
+
         </table>
     </div>
     

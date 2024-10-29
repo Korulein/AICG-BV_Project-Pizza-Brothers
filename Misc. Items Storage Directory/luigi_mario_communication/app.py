@@ -5,6 +5,7 @@ app = Flask(__name__)
 quantity = []
 data = []
 datas = []
+preparation = []
 order_number = 101
 
 def generate_order(clock,order_number,order_details):
@@ -66,7 +67,8 @@ def view_order():
 def show_current_orders():        
     print("view data", data)
     return render_template('order.html',
-                           orders=datas
+                           orders=datas,
+                           preparation=preparation
                            )
 
 @app.route('/mario_register', methods = ['POST'])
@@ -80,6 +82,34 @@ def register_order_from_mario():
     datas.append(newOrder)
 
     return "OK"
+
+@app.route('/luigi_register', methods = ['POST'])
+def register_order_from_luigi():
+    in_preparation = request.get_json()
+    order_time = in_preparation['date']
+    order_number = in_preparation['order_number']
+    order_details = in_preparation['order_details']
+
+    order_in_preparation = (order_time,order_number,order_details)
+    preparation.append(order_in_preparation)
+
+    return "OK"
+
+
+
+
+@app.route('/take', methods = ['GET'])
+def take_one_order():
+
+    if len(datas) == 0:
+        return {}
+
+    order = datas[0]
+    datas.pop(0)
+
+    (date, orderNumber,order_details) = order
+    
+    return { 'date': date, 'order_number': orderNumber, 'order_details': order_details }
 
 
 if __name__ == '__main__':  
