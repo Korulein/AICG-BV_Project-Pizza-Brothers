@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/Pizza Brothers Logo.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js" defer></script>
+    <style>
+        p span {
+            font-family: 'Lucida Sans';
+            font-size: larger;
+            color: #dc3545;
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+    </style>
+    
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="logo">
+                <img src="../static/Pizza Brothers Logo.png" class="logo">
+            </div>
+        </nav>
+       </section>
+
+<div class="confirmation-container">
+    <h1>Thank You for Your Order!</h1>
+    <p class="order-message">Your order has been confirmed. <br> <br> <span> Go to Mario to pay for your pizza! </span> </p>
+
+</div>
+
+</body>
+</html>

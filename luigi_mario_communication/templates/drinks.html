@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/Pizza Brothers Logo.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    
+    <section>
+        <nav>
+            <div class="logo">
+                <img src="../static/Pizza Brothers Logo.png" class="logo">   
+            </div>
+
+        </nav>
+    </section>
+
+    
+    <form action="/register_order" method="post">
+
+    
+
+        <div class="menu">
+       <h1>Choose your drink</h1>
+           
+               <div class="menu_box">
+                   <div class="menu_card">
+           
+                      <div class="menu_image">
+                           <img src="../static/coca cola.png">
+                      </div>
+                    <div class="menu_info">
+                       <h3> Coca Cola </h3> 
+                       <h3> €3.50 </h3>
+            
+                    </div>
+                      <label>
+                           <input type="checkbox" name="drinks" value="Coca Cola"> (€3.50)
+                      </label>
+                           <input type="number" name="quantity_Coca_Cola" min="1" placeholder="Qty">
+                   </div>
+           
+       
+       
+               <div class="menu_box">
+                   <div class="menu_card">
+           
+                      <div class="menu_image">
+                           <img src="../static/coca cola zero.png">
+                      </div>
+                   <div class="menu_info">
+                       <h3> Coca Cola Zero </h3> 
+                       <h3> €3.50 </h3>
+                
+                   </div>
+                       <label>
+                           <input type="checkbox" name="drinks" value="Coca_Cola_Zero"> (€3.50)
+                       </label>
+                            <input type="number" name="quantity_Coca_Cola_Zero" min="1" placeholder="Qty">
+                   </div>
+           
+       
+               <div class="menu_box">
+                   <div class="menu_card">
+           
+                      <div class="menu_image">
+                           <img src="../static/sprite.png">
+                      </div>
+                   <div class="menu_info">
+                       <h3> Sprite </h3> 
+                       <h3> €3.50 </h3>
+                    
+                   </div>
+       
+                   <label>
+                      <input type="checkbox" name="drinks" value="Spirte"> (€3.50)
+                   </label>
+                      <input type="number" name="quantity_Sprite" min="1" placeholder="Qty">
+                   </div>
+       
+       
+               <div class="menu_box">
+                   <div class="menu_card">
+           
+                      <div class="menu_image">
+                           <img src="../static/sprite-zero.png">
+                      </div>
+                   <div class="menu_info">
+                       <h3> Sprite Zero </h3> 
+                       <h3> €3.50 </h3>
+                   </div>
+                      <label>
+                         <input type="checkbox" name="drinks" value="Sprite Zero"> (€3.50)
+                      </label>
+                         <input type="number" name="quantity_Sprite_Zero" min="1" placeholder="Qty">
+                   </div>
+               
+       
+               <div class="menu_box">
+                   <div class="menu_card">
+           
+                      <div class="menu_image">
+                           <img src="../static/fuze tea.png">
+                      </div>
+                   <div class="menu_info">
+                       <h3> Fuze Tea </h3> 
+                       <h3> €3.50 </h3>
+                
+                   </div>
+                     <label>
+                       <input type="checkbox" name="drinks" value="Fuze tea"> (€3.50)
+                    </label>
+                       <input type="number" name="quantity_Fuze_tea" min="1" placeholder="Qty">
+                   </div>
+       
+       
+               <div class="menu_box">
+                   <div class="menu_card">
+           
+                      <div class="menu_image">
+                           <img src="../static/water.png">
+                      </div>
+                   <div class="menu_info">
+                       <h3> Water  </h3> 
+                       <h3> 2.50 </h3>
+                    
+                   </div>
+                     <label>
+                       <input type="checkbox" name="drinks" value="Water"> (€2.50)
+                     </label>
+                       <input type="number" name="quantity_Water" min="1" placeholder="Qty">
+              </div>
+       
+       
+       <div class="payment_method">
+           <h3>Select Payment Method</h3>
+           <label>
+               <input type="radio" name="payment_method" value="Card" required> Card
+           </label>
+           <label>
+               <input type="radio" name="payment_method" value="Cash" required> Cash
+           </label>
+       
+           <button type="submit">Submit Order</button>
+       </div>
+       
+    <div class="navigation-buttons">
+         <button> <a href="http://127.0.0.1:5000/create_order" class="nav-button back-button"> Pizza's</a></button>
+         <button> <a href="http://127.0.0.1:5000/choosepayment" class="nav-button next-button"> Submit </a></button>
+ 
+    </div>
+       
+       </form>

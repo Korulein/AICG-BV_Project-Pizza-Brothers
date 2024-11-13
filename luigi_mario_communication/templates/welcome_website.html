@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Brothers</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/Pizza Brothers Logo.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js" defer></script>
+    <style>
+        /* Add some styling for the button */
+        .staff-login {
+            position: absolute; /* Position it in the top right corner */
+            right: 20px; /* Adjust the distance from the right */
+            top: 20px; /* Adjust the distance from the top */
+            padding: 10px 20px; /* Padding for the button */
+            background-color: #660909; /* Bootstrap primary color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Font size */
+        }
+
+        .staff-login:hover {
+            background-color: #340404; /* Darker shade on hover */
+        }
+
+        h2{
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <nav>
+        <div class="logo">
+            <img src="../static/Pizza Brothers Logo.png" class="logo">
+        </div>
+        <a href="/staff_login" class="staff-login">Staff Login</a> <!-- Staff Login Button -->
+    </nav>
+</section>
+
+<div class="container">
+
+    <h1>Welcome!</h1>
+    <h2> About Us:<br> <br>
+        Welcome to Mario Brothers Pizzeria, where Italian authenticity meets a passion for quality and tradition. Founded by two brothers with roots in Naples, we bring the taste of Italy right to your table, using recipes passed down through generations and perfected over time. At Mario Brothers Pizzeria, we believe that a great pizza starts with the finest ingredients – from our hand-stretched dough made fresh daily to our rich tomato sauce crafted from vine-ripened tomatoes, and the finest Italian mozzarella.
+        Every pizza we make tells a story of Italian heritage and dedication. Our ovens are heated to perfection, giving each pizza a crisp, golden crust while keeping the inside soft and flavorful. Whether you're here to enjoy a classic Cheese Pizza, a hearty Meatlover’s, or one of our signature creations, we’re dedicated to making sure every bite transports you to the streets of Italy.
+        So come in, relax, and let us take you on a journey of Italian flavors. From our family to yours, welcome to Mario Brothers Pizzeria – the home of authentic Italian pizza. Buon appetito!
+        </h2>
+    <div class="options">
+        <a href="/create_order">
+            <div class="option-box1" onclick="sendData('Eat in')">
+                <p>Order Now</p>
+            </div>
+        </a>
+    
+    </div>
+      
+    <div class="rectangle-box1"></div>
+    <div class="rectangle-box2"></div>
+    
+</div>
+
+</body>
+</html>
+

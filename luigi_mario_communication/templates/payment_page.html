@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+</head>
+<body>
+
+<h2>Payment Form</h2>
+
+<form action="/process_payment" method="post">
+  <label for="amount">Amount in Euros:</label>
+  <input type="number" id="amount" name="amount" step="0.01" min="0" placeholder="0.00" required>
+  <br><br>
+
+  <label>Payment Method:</label><br>
+  <input type="radio" id="cash" name="payment_method" value="Cash" required>
+  <label for="cash">Cash</label><br>
+  <input type="radio" id="card" name="payment_method" value="Card">
+  <label for="card">Card</label><br><br>
+
+  <button type="submit">Pay Now</button>
+</form>
+
+</body>
+</html>
+
+
+
+<button><a href="/order_console">Go Back to Console</a></button>
+
+</body>
+</html>

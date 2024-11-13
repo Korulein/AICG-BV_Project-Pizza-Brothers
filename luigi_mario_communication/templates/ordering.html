@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Brothers</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    
+    <section>
+        <nav>
+            <div class="logo">
+                <img src="../static/Pizza Brothers Logo.png" class="logo">   
+            </div>
+
+        </nav>
+    </section>
+
+    
+
+    
+<div class="menu">
+    <form action="/register_order" method="post">
+    <h1>Create your order</h1>
+    <div class="menu_box">
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/cheese.png">
+           </div>
+        <div class="menu_info">
+            <h3> Cheese </h3> 
+            <h3> €8 </h3>
+            <p>Tomatosauce, mozzarella, Gouda and cheddar cheesemix & Emmentaler</p>
+            <div class="quantity-selector">
+                <!-- <button class="minus-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="plus-btn">+</button>
+                <div class="cheese" onclick="sendData('box1')"> Add </div> -->
+
+                <td><label for="Cheese"></label></td>
+                <td><input type="checkbox" id="Cheese" name="pizza" value="Cheese"></td>
+                <td><input type="number" id="quantity_Cheese" name="quantity_Cheese" min="1" max="10"></td>
+            
+                
+    
+            </div>
+    
+        </div> 
+    </div>  
+    
+    <div class="menu_box">
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/pepperoni.png">
+           </div>
+        <div class="menu_info">
+            <h3> Pepperoni </h3> 
+            <h3> €10 </h3>
+            <p>Tomatosauce, mozzarella & pepperoni.</p>
+            <div class="quantity-selector">
+
+              <td><label for="Pepperoni"></label></td>
+              <td><input type="checkbox" id="Pepperoni" name="pizza" value="Pepperoni"></td>
+              <td><input type="number" id="quantity_Pepperoni" name="quantity_Pepperoni" min="1" max="10"></td>
+
+            </div>
+
+        </div> 
+    </div>  
+
+    <div class="menu_box">
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/hawaiian.png">
+           </div>
+        <div class="menu_info">
+            <h3> Hawaiian </h3> 
+            <h3> €12 </h3>
+            <p>Tomatosauce, ham, pineapple & extra mozzarella.</p>
+            <div class="quantity-selector">
+                <td><label for="Hawaiian"></label></td>
+                <td><input type="checkbox" id="Hawaiian" name="pizza" value="Hawaiian"></td>
+                <td><input type="number" id="quantity_Hawaiian" name="quantity_Hawaiian" min="1" max="10"></td>
+            </div>
+    
+        </div> 
+    </div>  
+
+    <div class="menu_box">
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/meatlover.pngh.png">
+           </div>
+        <div class="menu_info">
+            <h3> Meatlover </h3> 
+            <h3> €13 </h3>
+            <p>BBQ sauce, mozzarella, pepperoni, ground beef, chicken kebab, bacon & onion</p>
+            <div class="quantity-selector">
+                <td><label for="Meatlover"></label></td>
+                <td><input type="checkbox" id="Meatlover" name="pizza" value="Meatlover"></td>
+                <td><input type="number" id="quantity_Meatlover" name="quantity_Meatlover" min="1" max="10"></td>
+            </div>
+    
+        </div> 
+    </div>  
+
+    <div class="menu_box">
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/shoarma.png">
+           </div>
+        <div class="menu_info">
+            <h3> Shoarma </h3> 
+            <h3> €15 </h3>
+            <p>Tomatosauce, mozzarella, shoarma & een swirl of garlicsauce.</p>
+            <div class="quantity-selector">
+                <td><label for="Shoarma"></label></td>
+                <td><input type="checkbox" id="Shoarma" name="pizza" value="Shoarma"></td>
+                <td><input type="number" id="quantity_Shoarma" name="quantity_Shoarma" min="1" max="10"></td>
+            </div>
+    
+        </div> 
+    </div>  
+
+    <div class="menu_box">
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/bbq and bacon.png">
+           </div>
+        <div class="menu_info">
+            <h3> BBQ and bacon </h3> 
+            <h3> €16 </h3>
+            <p>BBQ sauce, mozzarella, grilled chicken & bacon</p>
+            <div class="quantity-selector">
+                <td><label for="BBQ_and_bacon"></label></td>
+                <td><input type="checkbox" id="BBQ_and_bacon" name="pizza" value="BBQ_and_bacon"></td>
+                <td><input type="number" id="quantity_BBQ_and_bacon" name="quantity_BBQ_and_bacon" min="1" max="10"></td>
+            </div>
+    
+        </div>
+  
+    </div>  
+    <div class="navigation-buttons">
+       <button> <a href="http://127.0.0.1:5000/" class="nav-button back-button">← Back</a></button>
+        <!-- <button> <a href="http://127.0.0.1:5000/drinks" class="nav-button next-button">Next →</a></button>  -->
+        <input type="submit" value="Submit">
+        <button> <a href= "http://127.0.0.1:5000/drinks" class= "nav-button next-button "> Drinks </a></button>
+    </div>
+</form> 
+</div>
+

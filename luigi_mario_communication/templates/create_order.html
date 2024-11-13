@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/Pizza Brothers Logo.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<section>
+    <nav>
+        <div class="logo">
+            <img src="../static/Pizza Brothers Logo.png" class="logo">
+        </div>
+
+    </nav>
+</section>
+
+
+<br> <br> <br> <br>
+
+<form action="/register_order" method="post">
+
+<div class="menu">
+    <h1>Create an Order</h1>
+    <h2>Select Pizzas</h2>
+
+    <div class="menu_box">
+        <div class="menu_card">
+    
+            <div class="menu_image">
+                <img src="../static/cheese.png">
+            </div>
+            
+            <div class="menu_info">
+                <h3> Cheese </h3> 
+                <h3> €8 </h3>
+                <p>Tomatosauce, mozzarella, Gouda and cheddar cheesemix & Emmentaler</p>
+            </div>
+        
+            <label>
+                <input type="checkbox" name="pizza" value="Pizza Cheese"> (€8.00)
+            </label>
+        
+            <input type="number" name="quantity_Cheese" min="1" placeholder="Qty">
+        </div>
+    
+
+    
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/pepperoni.png">
+           </div>
+        <div class="menu_info">
+            <h3> Pepperoni </h3> 
+            <h3> €10 </h3>
+            <p>Tomatosauce, mozzarella & pepperoni.</p>
+        </div>
+        <label>
+            <input type="checkbox" name="pizza" value="Pizza Pepperoni"> (€10.00)
+        </label>
+        
+        <input type="number" name="quantity_Pepperoni" min="1" placeholder="Qty">
+        </div>
+    
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/hawaiian.png">
+           </div>
+        <div class="menu_info">
+            <h3> Hawaiian </h3> 
+            <h3> €9.50 </h3>
+            <p>Tomatosauce, ham, pineapple & extra mozzarella.</p>
+        </div>
+
+        <label>
+            <input type="checkbox" name="pizza" value="Pizza Hawaiian">  (€9.50)
+        </label>
+        <input type="number" name="quantity_Hawaiian" min="1" placeholder="Qty">
+        </div>
+    
+
+            <div class="menu_card">
+    
+               <div class="menu_image">
+                    <img src="../static/meatlover.pngh.png">
+               </div>
+            <div class="menu_info">
+                <h3> Meatlover </h3> 
+                <h3> €12 </h3>
+                <p>BBQ sauce, mozzarella, pepperoni, ground beef, chicken kebab, bacon & onion</p>
+            </div>
+        <label>
+            <input type="checkbox" name="pizza" value="Pizza Meat Lover"> (€12.00)
+        </label>
+        <input type="number" name="quantity_Meatlover" min="1" placeholder="Qty">
+        </div>
+    
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/shoarma.png">
+           </div>
+        <div class="menu_info">
+            <h3> Shoarma </h3> 
+            <h3> €11.50 </h3>
+            <p>Tomatosauce, mozzarella, shoarma & een swirl of garlicsauce.</p>
+        </div>
+        <label>
+            <input type="checkbox" name="pizza" value="Pizza Shoarma"> (€11.50)
+        </label>
+        <input type="number" name="quantity_Shoarma" min="1" placeholder="Qty">
+        </div>
+    
+
+            <div class="menu_card">
+    
+               <div class="menu_image">
+                    <img src="../static/bbq and bacon.png">
+               </div>
+            <div class="menu_info">
+                <h3> BBQ and bacon </h3> 
+                <h3> €10.50 </h3>
+                <p>BBQ sauce, mozzarella, grilled chicken & bacon</p>
+            </div>
+        <label>
+            <input type="checkbox" name="pizza" value="Pizza BBQ and Bacon"> (€10.50)
+        </label>
+        <input type="number" name="quantity_BBQ_and_bacon" min="1" placeholder="Qty">
+        </div>
+   </div>
+
+   <h2>Select Drinks</h2>
+
+
+    <div class="menu_box">
+        
+        <div class="menu_card">
+
+           <div class="menu_image">
+                <img src="../static/coca cola.png">
+           </div>
+         
+            <div class="menu_info">
+                <h3> Coca Cola </h3> 
+                <h3> €3.50 </h3>
+            </div>
+        
+            <label>
+                <input type="checkbox" name="drinks" value="Coca Cola"> (€3.50)
+            </label>
+            <input type="number" name="quantity_Coca_Cola" min="1" placeholder="Qty">
+        </div>
+    
+        <div class="menu_card">
+           
+            <div class="menu_image">
+                <img src="../static/coca cola zero.png">
+            </div>
+        
+            <div class="menu_info">
+                <h3> Coca Cola Zero </h3> 
+                <h3> €3.50 </h3>
+            
+            <label><input type="checkbox" name="drinks" value="Coca Cola Zero">  (€3.50)</label>
+            <input type="number" name="quantity_Coca_Cola_Zero" min="1" placeholder="Qty">
+            </div>
+        </div>
+    
+        <div class="menu_card">
+           
+            <div class="menu_image">
+                <img src="../static/sprite.png">
+            </div>
+            
+            <div class="menu_info">
+                <h3> Sprite </h3> 
+                <h3> €3.50 </h3>
+            </div>
+            <label>
+                <input type="checkbox" name="drinks" value="Sprite"> (€3.50)
+            </label>
+            <input type="number" name="quantity_Sprite" min="1" placeholder="Qty">
+        </div>
+   
+        <div class="menu_card">
+           
+            <div class="menu_image">
+                <img src="../static/sprite-zero.png">
+            </div>
+            
+            <div class="menu_info">
+                <h3> Sprite Zero </h3> 
+                <h3> €3.50 </h3>
+            </div>
+            
+            <label>
+                <input type="checkbox" name="drinks" value="Sprite Zero">  (€3.50)
+            </label>
+            <input type="number" name="quantity_Sprite_Zero" min="1" placeholder="Qty">
+        </div>
+   
+        <div class="menu_card">
+           
+            <div class="menu_image">
+                <img src="../static/fuze tea.png">
+            </div>
+            
+            <div class="menu_info">
+                <h3> Fuze Tea </h3> 
+                <h3> €3.50 </h3>
+            </div>
+            <label>
+                <input type="checkbox" name="drinks" value="Fuze Tea"> (€3.50)
+            </label>
+            <input type="number" name="quantity_Fuze_tea" min="1" placeholder="Qty">
+        </div>
+    
+        <div class="menu_card">
+           
+            <div class="menu_image">
+                <img src="../static/water.png">
+            </div>
+            <div class="menu_info">
+                <h3> Water  </h3> 
+                <h3> 2.50 </h3> 
+            </div>
+        
+            <label>
+                <input type="checkbox" name="drinks" value="Water">  (€2.50)
+            </label>
+            <input type="number" name="quantity_Water" min="1" placeholder="Qty">
+        </div>
+    </div>
+
+ <br> <br> <br>
+
+    <div class="payment_method">
+        <h3>Select Payment Method:</h3>
+        
+        <label>
+            <button><input type="radio" name="payment_method" value="Card" required> Card </button>
+        </label>
+        
+        <label>
+            <button><input type="radio" name="payment_method" value="Cash" required> Cash </button>
+        </label>
+        <br> <br> 
+        <button type="submit">Submit Order</button>
+    </div>
+    
+</form>
+
+</body>
+</html>

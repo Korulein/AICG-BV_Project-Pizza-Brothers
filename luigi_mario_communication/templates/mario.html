@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+</head>
+
+<body>
+
+    <form action="/register_order" method="post">
+        <table>
+            <tr>
+                <th>Pizza Types</th>
+                <th>Quantity</th>
+            </tr>
+        
+           <tr>
+                <td><label for="Margherita">Pizza Margherita</label>
+                    <input type="checkbox" id="Margherita" name="pizza" value="Margherita"></input></td>
+                <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+           </tr> 
+        
+            <tr>
+                <td><label for="Pepperoni">Pizza Pepperoni</label>
+                    <input type="checkbox" id="Pepperoni" name="pizza" value="Pepperoni"></input></td>
+                    <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>    
+
+            <tr>   
+                <td><label for="Four_Cheese">Pizza Four Cheese</label>
+                <input type="checkbox" id="Four_Cheese" name="pizza" value="Four Cheese"></input></td>
+                <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+            </tr>
+
+            
+        </table>
+
+        <input type="submit" value="Submit">   
+    </form>
+
+    <button><a href="/current_orders">current orders</a></button>
+    <div class="pizza_types">
+        
+    <!-- <h1>Pizza Checkboxes</h1>
+
+    <form action="/register_order" method="post"></form>
+    <input type="checkbox" id="Margherita" class="pizza" value="Margherita"></input>
+    <label for="Margherita">Pizza Margherita</label><br>
+    <input type="checkbox" id="Pepperoni" class="pizza" value="Pepperoni"></input>
+    <label for="Pepperoni">Pizza Pepperoni</label><br>
+    <input type="checkbox" id="Four_Cheese" class="pizza" value="Four Cheese"></input>
+    <label for="Four_Cheese">Pizza Four Cheese</label><br>
+    <input type="checkbox" id="BBQ_Chicken" class="pizza" value="BBQ Chicken"></input>
+    <label for="Margherita">Pizza Margherita</label><br>
+    <input type="checkbox" id="Vegetarian" class="pizza" value="Vegetarian"></input>
+    <label for="Margherita">Pizza Margherita</label><br>
+    <input type="checkbox" id="Meat_Lovers" class="pizza" value="Meat Lover’s"></input>
+    <label for="Margherita">Pizza Margherita</label><br>
+     -->
+    </div>
+</body>
+</html>

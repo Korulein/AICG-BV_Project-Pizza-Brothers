@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Orders - Pizza Brothers</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/Pizza Brothers Logo.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <style>
+        /* Add some styling for the button */
+        .return-to-console-container {
+            position: absolute; /* Position it in the top right corner */
+            right: 20px; /* Adjust the distance from the right */
+            top: 20px; /* Adjust the distance from the top */
+            padding: 10px 20px; /* Padding for the button */
+            background-color: #660909;
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Font size */
+        }
+
+        .return-to-console-container:hover {
+            background-color: #340404; /* Darker shade on hover */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+   <section>
+    <nav>
+        <div class="logo">
+            <img src="../static/Pizza Brothers Logo.png" class="logo">
+        </div>
+        <div class="return-to-console-container">
+            <a href="/staff_console" class="return-to-console-button">
+                Return to Console
+            </a>
+        </div>
+    </nav>
+   </section>
+
+ <div class="overview">
+<br><br><br>
+<h1> Order Details </h1>
+
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>Order Time</th>
+            <th>Order Number</th>
+            <th>Items</th>
+            <th>Total Price (€)</th>
+        
+           
+        </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.order_time }}</td>
+            <td>{{ order.order_number }}</td>
+            <td>{{ order.items_display }}</td>
+            <td>{{ order.total_price }}</td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br> <br> <br>
+
+    <div class="payment_method">
+        <a href="/corderconfirmation"><button type="submit">Confirm Order</button></a>
+    </div>
+</div>
+        
+</body>
+</html>

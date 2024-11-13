@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10">
+    <title>Payment Status</title>
+
+    <style>
+        body {
+            font-family: 'Lucida Sans';
+            display: flex; /* Enables Flexbox layout for easy centering */
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
+            height: 100vh; /* Sets the height of the body to 100% of the viewport height */
+            margin: 0; /* Removes default margin around the body */
+            background-color: #BFDAA4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f9;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-right: 5px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+        /* Styling specifically for the staff console button container */
+        .staff-console-button {
+            margin-top: 20px; /* Space above the button */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <img src="../static/Pizza Brothers Logo.png" alt="Pizza Brothers Logo">
+    </div>
+
+    <h1>Payment Status</h1>
+
+    <table>
+        <tr>
+            <th>Date and Time</th>
+            <th>Order Number</th>
+            <th>Total Price</th>
+            <th>Payment Method</th>
+            <th>Dine Option</th> <!-- Added new column for Dine Option -->
+        </tr>
+
+        {% for date, number, total_price, payment_method, dine_option in orders %}
+        <tr>
+            <td>{{ date }}</td>
+            <td>{{ number }}</td>
+            <td>{{ total_price }}</td>
+            <td>{{ payment_method }}</td>
+            <td>{{ dine_option }}</td>
+            <td>
+                <form action="/remove_payment_order" method="post" style="display:inline;">
+                    <input type="hidden" name="order_number" value="{{ number }}">
+                    <button type="submit">Remove</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="staff-console-button">
+        <button onclick="window.location.href='/staff_console'">Staff Console</button>
+    </div>
+
+</div>
+
+</body>
+</html>

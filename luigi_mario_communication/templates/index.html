@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Brothers</title>
+    <link href="{{ url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/Pizza Brothers Logo.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="script.js" defer></script>
+    <style>
+        /* Add some styling for the button */
+        .staff-login {
+            position: absolute; /* Position it in the top right corner */
+            right: 20px; /* Adjust the distance from the right */
+            top: 20px; /* Adjust the distance from the top */
+            padding: 10px 20px; /* Padding for the button */
+            background-color: #660909; /* Bootstrap primary color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Font size */
+        }
+
+        .staff-login:hover {
+            background-color: #340404; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <nav>
+        <div class="logo">
+            <img src="../static/Pizza Brothers Logo.png" class="logo">
+        </div>
+        <a href="/staff_login" class="staff-login">Staff Login</a> <!-- Staff Login Button -->
+    </nav>
+</section>
+
+<div class="container">
+
+    <h1>Welcome!</h1>
+    <h2> Welcome to The Pizza Brothers, your go-to spot for delicious, handcrafted pizzas! Explore our menu of fresh ingredients and tasty combinations. When you're ready, place your order right here, and we'll take care of the rest. Enjoy your meal!</h2>
+    <div class="options">
+        <a href="/create_order?dine_option=Eat in">
+            <div class="option-box1" onclick="sendData('Eat in')">
+                <img src="../static/table.png">
+                <p>Eat in</p>
+            </div>
+        </a>
+        <a href="/create_order?dine_option=Take away">
+            <div class="option-box2">
+                <img src="../static/take away.png" onclick="sendData('Take away')">
+                <p>Take away</p>
+            </div>
+        </a>
+
+    </div>
+    <div class="rectangle-box1"></div>
+    <div class="rectangle-box2"></div>
+    
+</div>
+
+</body>
+</html>
+
